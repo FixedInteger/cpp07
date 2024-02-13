@@ -1,29 +1,27 @@
-NAME = ex01
+NAME = ex02
 C++ = c++
 CFLAGS = -Wall -Wextra -Werror
+SRCS = main.cpp
 
-SRCS = main.cpp \
+message = ""
 
-# message = "isma3uni"x
+$(message) :
+	@echo "jericho hh"
+	@sleep 1
 
 OBJS = $(SRCS:.cpp=.o)
 
-#write a message
-$(message) :
-	@echo "isma3uni "
-	@sleep 1
 all : $(NAME) $(message)
 
-
-$(NAME) : $(OBJS) 
+$(NAME) : $(OBJS)
 	$(C++) $(CFLAGS) -o $(NAME) $(OBJS)
 
 clean :
 	rm -f $(OBJS)
 
-fclean : clean	
+fclean : clean
 	rm -f $(NAME)
 
 re :
-	$(MAKE) fclean
-	$(MAKE) all
+	@make fclean
+	@make all
