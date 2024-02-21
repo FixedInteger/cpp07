@@ -12,7 +12,7 @@ void iter(T *array, size_t length, void (*f)(T const &))
 
 void f(int const &a)
 {
-    int o  = a +32;
+    int o  = a + 32;
     std::cout << o << std::endl;
 }
 
